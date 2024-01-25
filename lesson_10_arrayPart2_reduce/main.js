@@ -45,7 +45,48 @@ var totalCoin = courses.reduce(function (accumulator, currentValue, carrentIndex
 // carrentIndexlà chỉ mục của currentValue
 // originArray là array gốc (originArray là courses)
 
-console.log(totalCoin);
+// console.log(totalCoin);
+
+
+var sports = [
+    {
+        name: 'Bơi lội',
+        gold: 11
+    },
+    {
+        name: 'Boxing',
+        gold: 3
+    },
+    {
+        name: 'Đạp xe',
+        gold: 4
+    },
+    {
+        name: 'Đấu kiếm',
+        gold: 5
+    },
+]
+
+function getTotalGold(array) {
+    var totalGold = array.reduce(function (accumulator, currentValue) {
+        console.log(accumulator);
+        console.log(currentValue.gold);
+        console.log(accumulator + currentValue.gold);
+        return accumulator + currentValue.gold;
+    }, 0);
+    return totalGold;
+}
+// 0 là giá trị khởi tạo (giá trị khởi tạo có thể là số/chữ.....)
+// accumulator là biến lưu trữ. lần đầu sẽ lưu giá trị khởi tạo
+// currentValue là giá trị hiện tại
+
+// Expected results:
+console.log(getTotalGold(sports)) // Output: 23
+
+
+
+
+
 
 
 
